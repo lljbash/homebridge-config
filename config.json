@@ -1,0 +1,54 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-154",
+        "bind": [
+            "br0"
+        ],
+        "advertiser": "ciao"
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 8080,
+            "auth": "form",
+            "theme": "auto",
+            "restart": "/opt/home/hb.sh restart",
+            "tempUnits": "c",
+            "lang": "auto",
+            "host": "192.168.50.1",
+            "log": {
+                "method": "file",
+                "path": "/opt/home/nohup.out"
+            },
+            "platform": "config"
+        },
+        {
+            "platform": "BroadlinkRM",
+            "name": "Broadlink RM",
+            "hideScanFrequencyButton": true,
+            "accessories": [
+                {
+                    "name": "ac-out",
+                    "type": "switch",
+                    "data": {
+                        "off": "2600ca008c940e390f140f390e390f150e150e390f150e150e390f150e150e3a0e390e160e390e150e390f390e390f390e150e390f390e3a0e150e150e150f140f390e150f140f390e390f390e150f140f150e150f140f150e150e150f390e390f390e390f380fae8e930f390e150e390f390e150f140f390e150f140f390e150f140f390e390f150e390f140f390e390f390f380f140f390f380f390e150f140f150e150f380f150e150f390e390f380f150e150f140f150e150e150f140f150e390f390e390f390e390f000d05000000000000000000000000",
+                        "on": "2600ca008c940e390e150f390e390f140f150e390f140f150e390f140f150e390f390e150f380f390e390f390e390f390e390f390e390f140f150e150e150f150e150e150f140f390e150f150e390f140f150e150e150f140f390e390f150e390f390e390f380fae8e930f390e150f380f3a0d150f150e390f140f150e390f140f150e390f390e150e390f390e390f390e390f390e390f390e390f140f150e150e150f150e150e150f140f390e150f140f390e150f150e150e150f140f390e390f150e390f390e390f380f000d05000000000000000000000000"
+                    }
+                },
+                {
+                    "name": "tv-switch",
+                    "type": "switch",
+                    "enableAutoOff": true,
+                    "onDuration": 1,
+                    "data": {
+                        "on": "2600500000012595131212141213121312141213123912131239123912381239123912391312123912131239121312131338121412131213133812131338123912131338133812381200050b0001284a12000d05000000000000"
+                    }
+                }
+            ]
+        }
+    ]
+}
