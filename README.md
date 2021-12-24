@@ -1,6 +1,6 @@
-#Homebridge on ASUS Router
+# Homebridge on ASUS Router
 
-##Install
+## Install
 
 First install Entware and Node.js.
 
@@ -12,7 +12,7 @@ npm install -g homebridge-config-ui-x
 npm install -g homebridge-broadlink-rm-pro v4.4.8
 ```
 
-##Files
+## Files
 
 ```
 /opt/home/.homebridge/config.json
